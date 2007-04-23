@@ -1,6 +1,6 @@
 %define LANG fr
-%define __version 1.68.0
-%define rel %mkrel 4
+%define __version 2.39.1
+%define rel %mkrel 1
 Summary:	French man (manual) pages from the Linux Documentation Project
 Name:		man-pages-%LANG
 Version:	%{__version}
@@ -14,6 +14,7 @@ Source3: http://www.delafond.org/traducmanfr/mansupfr.tar.bz2
 Source4: http://www.delafond.org/traducmanfr/archivemansupfr.tar.bz2
 Source10: http://www.enstimac.fr/Perl/perl-all-fr-man.tar.bz2
 Source11: man-pages-fr-1.58-extras.tar.bz2
+Source12: man-pages-extras-fr-0.7.1.tar.bz2
 Patch0:	man-pages-fr-1.64-tvtree1.diff
 Icon:		books-%LANG.xpm
 Buildroot: %_tmppath/%name-root
@@ -46,7 +47,7 @@ organized into the following sections:
 %define _mandir2 /usr/X11R6/man
 
 %prep
-%setup -a3 -a4 -a10 -a11
+%setup -a3 -a4 -a10 -a11 -a12
 %patch0 -p1
 
 %build
@@ -80,12 +81,9 @@ done
 #
 # remove doble files
 #
-rm $RPM_BUILD_ROOT/%_mandir/%LANG/man8/urpm*
 rm $RPM_BUILD_ROOT/%_mandir/%LANG/man1/xawtv.1*
 # these come from initscripts
 rm $RPM_BUILD_ROOT/%_mandir/%LANG/{man8/usernetctl.8*,man1/{consoletype,doexec,netreport,usleep}.1*}
-# this comes from setup
-rm $RPM_BUILD_ROOT/%_mandir/%LANG/man8/update-passwd.8*
 # these come from wireless:
 rm $RPM_BUILD_ROOT/%_mandir/%LANG/{man5/iftab.5,man7/wireless.7,man8/{iwgetid,ifrename}.8}*
 # these are provided by cups now
