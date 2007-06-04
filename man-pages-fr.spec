@@ -1,6 +1,6 @@
 %define LANG fr
 %define __version 2.39.1
-%define rel %mkrel 1
+%define rel %mkrel 2
 Summary:	French man (manual) pages from the Linux Documentation Project
 Name:		man-pages-%LANG
 Version:	%{__version}
@@ -82,6 +82,8 @@ done
 # remove doble files
 #
 rm $RPM_BUILD_ROOT/%_mandir/%LANG/man1/xawtv.1*
+# this one is provided by alsaconf:
+rm -f $RPM_BUILD_ROOT/%_mandir/%LANG/man8/alsaconf.8
 # these come from initscripts
 rm $RPM_BUILD_ROOT/%_mandir/%LANG/{man8/usernetctl.8*,man1/{consoletype,doexec,netreport,usleep}.1*}
 # these come from wireless:
