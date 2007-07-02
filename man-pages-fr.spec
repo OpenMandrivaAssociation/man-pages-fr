@@ -2,31 +2,31 @@
 %define __version 2.39.1
 %define rel %mkrel 3
 Summary:	French man (manual) pages from the Linux Documentation Project
-Name:		man-pages-%LANG
+Name:		man-pages-fr
 Version:	%{__version}
 Release:	%rel
 License:	GPL
 Group:	System/Internationalization
 URL: 	http://manpagesfr.free.fr/
 Source:	http://manpagesfr.free.fr/download/%name-%version.tar.bz2 
-Source2: man-pages-%LANG-goodies.tar.bz2
+Source2: man-pages-fr-goodies.tar.bz2
 Source3: http://www.delafond.org/traducmanfr/mansupfr.tar.bz2
 Source4: http://www.delafond.org/traducmanfr/archivemansupfr.tar.bz2
 Source10: http://www.enstimac.fr/Perl/perl-all-fr-man.tar.bz2
 Source11: man-pages-fr-1.58-extras.tar.bz2
 Source12: man-pages-extras-fr-0.7.1.tar.bz2
 Patch0:	man-pages-fr-1.64-tvtree1.diff
-Icon:		books-%LANG.xpm
+Icon:		books-fr.xpm
 Buildroot: %_tmppath/%name-root
 BuildRequires: man => 1.5j-8mdk
 Conflicts: rpm < 4.2, dkpg < 1.10.18, wireless-tools < 27-1mdk, urpmi < 4.5-2mdk
 Conflicts: linkchecker < 2.3, vim-common < 7.0-2mdk
-Requires: locales-%LANG, man => 1.5j-8mdk
+Requires: locales-fr, man => 1.5j-8mdk
 Prereq: sed grep man
 Autoreqprov: false
 BuildArchitectures: noarch
-Obsoletes: man-%LANG, manpages-%LANG
-Provides: man-%LANG, manpages-%LANG
+Obsoletes: man-fr, manpages-fr
+Provides: man-fr, manpages-fr
 
 %description
 A large collection of man pages (reference material) from the Linux 
