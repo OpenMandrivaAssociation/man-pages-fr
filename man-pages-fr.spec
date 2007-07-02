@@ -1,6 +1,6 @@
 %define LANG fr
 %define __version 2.39.1
-%define rel %mkrel 2
+%define rel %mkrel 3
 Summary:	French man (manual) pages from the Linux Documentation Project
 Name:		man-pages-%LANG
 Version:	%{__version}
@@ -44,10 +44,8 @@ organized into the following sections:
         Section 8:  System administration (intro only)
         Section 9:  Kernel routines
 
-%define _mandir2 /usr/X11R6/man
-
 %prep
-%setup -a3 -a4 -a10 -a11 -a12
+%setup -q -a3 -a4 -a10 -a11 -a12
 %patch0 -p1
 
 %build
@@ -67,15 +65,15 @@ mv DocFr/* man1
 %install
 ln -sf iso_8859-1.7 man7/latin1.7; ln -sf iso_8859-1.7 man7iso_8859_7.7
 rm -rf $RPM_BUILD_ROOT
-mkdir -p $RPM_BUILD_ROOT/{%_mandir2,%_mandir}/%LANG/man{1,2,3,4,5,6,7}
+mkdir -p $RPM_BUILD_ROOT/%_mandir/%LANG/man{1,2,3,4,5,6,7}
 
 # install X man pages :
-for i in man{1,3,4,5,6}; do cp -a pagesdeman%_mandir2/%LANG/$i/*  $RPM_BUILD_ROOT/%_mandir2/%LANG/$i;done
+for i in man{1,3,4,5,6}; do cp -a pagesdeman/usr/X11R6/man/%LANG/$i/*  $RPM_BUILD_ROOT/%_mandir/%LANG/$i;done
 
 mkdir -p $RPM_BUILD_ROOT/var/catman/%LANG/cat{1,2,3,4,5,6,7,8,9,n}
 
 for i in 1 2 3 4 5 6 7 8 9 ; do
-	cp -adpvrf man$i $RPM_BUILD_ROOT/%_mandir/%LANG/||:
+	cp -adprf man$i $RPM_BUILD_ROOT/%_mandir/%LANG/||:
 done
 
 #
@@ -147,8 +145,6 @@ rm -rf $RPM_BUILD_ROOT
 %dir /var/cache/man/%LANG
 %verify(not md5 mtime size) /var/cache/man/%LANG/whatis
 %_mandir/%LANG/man*
-%dir %_mandir2/%LANG
-%_mandir2/%LANG/man*
 %attr(755,root,man)/var/catman/%LANG
 %config(noreplace) %attr(755,root,root)/etc/cron.weekly/makewhatis-%LANG.cron
 
