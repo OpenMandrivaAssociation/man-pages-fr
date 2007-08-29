@@ -1,6 +1,6 @@
 %define LANG fr
 %define __version 2.39.1
-%define rel %mkrel 3
+%define rel %mkrel 4
 Summary:	French man (manual) pages from the Linux Documentation Project
 Name:		man-pages-fr
 Version:	%{__version}
@@ -107,6 +107,8 @@ rm -f $RPM_BUILD_ROOT/%_mandir/%LANG/man1/linkchecker.1
 rm -f $RPM_BUILD_ROOT/%_mandir/%LANG/man1/nano.1*
 rm -f $RPM_BUILD_ROOT/%_mandir/%LANG/man1/rnano.1*
 rm -f $RPM_BUILD_ROOT/%_mandir/%LANG/man5/nanorc*
+# these are provided by fcron:
+rm -f $RPM_BUILD_ROOT/%_mandir/%LANG/man*/fcron*
 
 # upstream packagers are ... different
 rm -f $RPM_BUILD_ROOT%_mandir/%LANG/man1/.swp
