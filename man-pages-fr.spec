@@ -22,7 +22,6 @@ BuildRequires: man => 1.5j-8mdk
 Conflicts: rpm < 4.2, dkpg < 1.10.18, wireless-tools < 27-1mdk, urpmi < 4.5-2mdk
 Conflicts: linkchecker < 2.3, vim-common < 7.0-2mdk
 Requires: locales-fr, man => 1.5j-8mdk
-Prereq: sed grep man
 Autoreqprov: false
 BuildArchitectures: noarch
 Obsoletes: man-fr, manpages-fr
