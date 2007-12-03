@@ -1,6 +1,6 @@
 %define LANG fr
-%define __version 2.39.1
-%define rel %mkrel 4
+%define __version 2.59.0
+%define rel %mkrel 1
 Summary:	French man (manual) pages from the Linux Documentation Project
 Name:		man-pages-fr
 Version:	%{__version}
@@ -14,9 +14,8 @@ Source3: http://www.delafond.org/traducmanfr/mansupfr.tar.bz2
 Source4: http://www.delafond.org/traducmanfr/archivemansupfr.tar.bz2
 Source10: http://www.enstimac.fr/Perl/perl-all-fr-man.tar.bz2
 Source11: man-pages-fr-1.58-extras.tar.bz2
-Source12: man-pages-extras-fr-0.7.1.tar.bz2
+Source12: man-pages-extras-fr-0.7.9.tar.bz2
 Source20: books-fr.xpm
-Patch0:	man-pages-fr-1.64-tvtree1.diff
 Buildroot: %_tmppath/%name-root
 BuildRequires: man => 1.5j-8mdk
 Conflicts: rpm < 4.2, dkpg < 1.10.18, wireless-tools < 27-1mdk, urpmi < 4.5-2mdk
@@ -45,7 +44,6 @@ organized into the following sections:
 
 %prep
 %setup -q -a3 -a4 -a10 -a11 -a12
-%patch0 -p1
 
 %build
 rm -f man2/core.21??
