@@ -16,7 +16,6 @@ Source10: http://www.enstimac.fr/Perl/perl-all-fr-man.tar.bz2
 Source11: man-pages-fr-1.58-extras.tar.bz2
 Source12: man-pages-extras-fr-0.7.9.tar.bz2
 Source20: books-fr.xpm
-Buildroot: %_tmppath/%name-root
 BuildRequires: man => 1.5j-8mdk
 Conflicts: rpm < 4.2, dkpg < 1.10.18, wireless-tools < 27-1mdk, urpmi < 4.5-2mdk
 Conflicts: linkchecker < 2.3, vim-common < 7.0-2mdk
