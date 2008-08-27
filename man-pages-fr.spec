@@ -1,5 +1,5 @@
 %define LANG fr
-%define __version 2.59.0
+%define __version 3.03.0
 %define rel %mkrel 2
 Summary:	French man (manual) pages from the Linux Documentation Project
 Name:		man-pages-fr
@@ -15,6 +15,7 @@ Source4: http://www.delafond.org/traducmanfr/archivemansupfr.tar.bz2
 Source10: http://www.enstimac.fr/Perl/perl-all-fr-man.tar.bz2
 Source11: man-pages-fr-1.58-extras.tar.bz2
 Source12: man-pages-extras-fr-0.7.9.tar.bz2
+Source13: http://manpagesfr.free.fr/download/man-pages-sup-fr-20080606.tar.bz2
 Source20: books-fr.xpm
 Buildroot: %_tmppath/%name-root
 BuildRequires: man => 1.5j-8mdk
@@ -43,7 +44,7 @@ organized into the following sections:
         Section 9:  Kernel routines
 
 %prep
-%setup -q -a3 -a4 -a10 -a11 -a12
+%setup -q -a3 -a4 -a10 -a11 -a12 -a13
 
 %build
 rm -f man2/core.21??
