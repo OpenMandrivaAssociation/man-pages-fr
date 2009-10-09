@@ -1,6 +1,6 @@
 %define LANG fr
 %define __version 3.03.0
-%define rel %mkrel 3
+%define rel %mkrel 4
 Summary:	French man (manual) pages from the Linux Documentation Project
 Name:		man-pages-fr
 Version:	%{__version}
@@ -110,6 +110,9 @@ rm -f $RPM_BUILD_ROOT/%_mandir/%LANG/man*/fcron*
 
 # upstream packagers are ... different
 rm -f $RPM_BUILD_ROOT%_mandir/%LANG/man1/.swp
+
+# there is already a tzselect man page at man8/tzselect.8
+rm -f $RPM_BUILD_ROOT%_mandir/%LANG/man1/tzselect.1
 
 tar jxf %SOURCE2 -C $RPM_BUILD_ROOT/usr/share
 LANG=%LANG DESTDIR=$RPM_BUILD_ROOT %_sbindir/makewhatis $RPM_BUILD_ROOT/%_mandir/%LANG
