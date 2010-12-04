@@ -1,6 +1,6 @@
 %define LNG fr
 %define __version 3.03.0
-%define rel %mkrel 6
+%define rel %mkrel 7
 Summary:	French man (manual) pages from the Linux Documentation Project
 Name:		man-pages-fr
 Version:	%{__version}
