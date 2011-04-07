@@ -1,10 +1,9 @@
 %define LNG fr
-%define __version 3.03.0
-%define rel %mkrel 7
+
 Summary:	French man (manual) pages from the Linux Documentation Project
 Name:		man-pages-fr
-Version:	%{__version}
-Release:	%rel
+Version:	3.03.0
+Release:	8
 License:	GPL
 Group:	System/Internationalization
 URL: 	http://manpagesfr.free.fr/
@@ -113,6 +112,9 @@ rm -f %{buildroot}%_mandir/%LNG/man1/.swp
 
 # there is already a tzselect man page at man8/tzselect.8
 rm -f %{buildroot}%_mandir/%LNG/man1/tzselect.1
+
+# nmap already provides it (#62985)
+rm -f %{buildroot}%_mandir/%LNG/man1/nmap.1
 
 tar jxf %SOURCE2 -C %{buildroot}/usr/share
 LANG=%LNG DESTDIR=%{buildroot} %_sbindir/makewhatis %{buildroot}/%_mandir/%LNG
