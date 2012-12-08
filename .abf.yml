@@ -1,10 +1,9 @@
 sources:
-  "archivemansupfr.tar.bz2:"	2115afed5ce60507e234ee5be1f91fabda50cf90
-  "books-fr.xpm:"	63d9367bf831e570ce0d489a0684bc625adc2505
-  "man-pages-extras-fr-0.7.9.tar.bz2:"	2191ce7471bd033ad5232b5cc804d698336bb11a
-  "man-pages-fr-1.58-extras.tar.bz2:"	8fe5586d566e580170381c29b6066a796c50f72d
-  "man-pages-fr-3.03.0.tar.bz2:"	de913b8cecba855b58f7bcc05a5c28c0d470c48b
-  "man-pages-fr-goodies.tar.bz2:"	b590fd768431dd0acd407a0de8aa413efbe6b4a9
-  "man-pages-sup-fr-20080606.tar.bz2:"	efcb5abf6b0a44d1e0acc4dfedb14b869b6cee40
-  "mansupfr.tar.bz2:"	68cf3e5852e33a462d763e967f8e0d9991f29089
-  "perl-all-fr-man.tar.bz2:"	8ce0b303b903683267a52a920b90c690d8badc34
+  "archivemansupfr.tar.bz2": 2115afed5ce60507e234ee5be1f91fabda50cf90
+  "man-pages-extras-fr-0.7.9.tar.bz2": 2191ce7471bd033ad5232b5cc804d698336bb11a
+  "man-pages-fr-1.58-extras.tar.bz2": 8fe5586d566e580170381c29b6066a796c50f72d
+  "man-pages-fr-3.03.0.tar.bz2": de913b8cecba855b58f7bcc05a5c28c0d470c48b
+  "man-pages-fr-goodies.tar.bz2": b590fd768431dd0acd407a0de8aa413efbe6b4a9
+  "man-pages-sup-fr-20080606.tar.bz2": efcb5abf6b0a44d1e0acc4dfedb14b869b6cee40
+  "mansupfr.tar.bz2": 68cf3e5852e33a462d763e967f8e0d9991f29089
+  "perl-all-fr-man.tar.bz2": 8ce0b303b903683267a52a920b90c690d8badc34
