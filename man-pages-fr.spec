@@ -112,6 +112,7 @@ rm -f %{buildroot}%{_mandir}/%{LNG}/man1/tzselect.1
 rm -f %{buildroot}%{_mandir}/%{LNG}/man1/nmap.1
 
 # (tpg) #conflicts with shadow-utils-4.1.5.1-5
+rm -f %{buildroot}%{_mandir}/%{LNG}/man1/chage.1
 rm -f %{buildroot}%{_mandir}/%{LNG}/man1/gpasswd.1
 rm -f %{buildroot}%{_mandir}/%{LNG}/man1/newgrp.1
 rm -f %{buildroot}%{_mandir}/%{LNG}/man5/faillog.5
