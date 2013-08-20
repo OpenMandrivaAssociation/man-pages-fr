@@ -3,7 +3,7 @@
 Summary:	French man (manual) pages from the Linux Documentation Project
 Name:		man-pages-fr
 Version:	3.03.0
-Release:	10
+Release:	11
 License:	GPLv2
 Group:		System/Internationalization
 Url:		http://manpagesfr.free.fr/
@@ -69,7 +69,7 @@ for i in 1 2 3 4 5 6 7 8 9 ; do
 done
 
 #
-# remove doble files
+# remove double files
 #
 rm %{buildroot}/%{_mandir}/%{LNG}/man1/xawtv.1*
 # this one is provided by alsaconf:
@@ -110,6 +110,26 @@ rm -f %{buildroot}%{_mandir}/%{LNG}/man1/tzselect.1
 
 # nmap already provides it (#62985)
 rm -f %{buildroot}%{_mandir}/%{LNG}/man1/nmap.1
+
+# (tpg) #conflicts with shadow-utils-4.1.5.1-5
+rm -f %{buildroot}%{_mandir}/%{LNG}/man1/gpasswd.1
+rm -f %{buildroot}%{_mandir}/%{LNG}/man1/newgrp.1
+rm -f %{buildroot}%{_mandir}/%{LNG}/man5/faillog.5
+rm -f %{buildroot}%{_mandir}/%{LNG}/man8/chpasswd.8
+rm -f %{buildroot}%{_mandir}/%{LNG}/man8/faillog.8
+rm -f %{buildroot}%{_mandir}/%{LNG}/man8/groupadd.8
+rm -f %{buildroot}%{_mandir}/%{LNG}/man8/groupdel.8
+rm -f %{buildroot}%{_mandir}/%{LNG}/man8/groupmod.8
+rm -f %{buildroot}%{_mandir}/%{LNG}/man8/grpck.8
+rm -f %{buildroot}%{_mandir}/%{LNG}/man8/lastlog.8
+rm -f %{buildroot}%{_mandir}/%{LNG}/man8/newusers.8
+rm -f %{buildroot}%{_mandir}/%{LNG}/man8/pwck.8
+rm -f %{buildroot}%{_mandir}/%{LNG}/man8/pwconv.8
+rm -f %{buildroot}%{_mandir}/%{LNG}/man8/userdel.8
+rm -f %{buildroot}%{_mandir}/%{LNG}/man8/usermod.8
+rm -f %{buildroot}%{_mandir}/%{LNG}/man8/vipw.8
+
+
 
 tar jxf %SOURCE2 -C %{buildroot}/usr/share
 LANG=%{LNG} DESTDIR=%{buildroot} %{_bindir}/mandb %{buildroot}/%{_mandir}/%{LNG}
