@@ -3,7 +3,7 @@
 Summary:	French man (manual) pages from the Linux Documentation Project
 Name:		man-pages-fr
 Version:	3.03.0
-Release:	11
+Release:	12
 License:	GPLv2
 Group:		System/Internationalization
 Url:		http://manpagesfr.free.fr/
