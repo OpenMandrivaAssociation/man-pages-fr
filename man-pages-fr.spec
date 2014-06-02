@@ -3,7 +3,7 @@
 Summary:	French man (manual) pages from the Linux Documentation Project
 Name:		man-pages-fr
 Version:	3.03.0
-Release:	15
+Release:	16
 License:	GPLv2
 Group:		System/Internationalization
 Url:		http://manpagesfr.free.fr/
@@ -118,6 +118,8 @@ rm -f %{buildroot}%{_mandir}/%{LNG}/man1/newgrp.1
 rm -f %{buildroot}%{_mandir}/%{LNG}/man5/faillog.5
 rm -f %{buildroot}%{_mandir}/%{LNG}/man8/chpasswd.8
 rm -f %{buildroot}%{_mandir}/%{LNG}/man8/faillog.8
+rm -f %{buildroot}%{_mandir}/%{LNG}/man8/grpconv.8
+rm -f %{buildroot}%{_mandir}/%{LNG}/man8/grpunconv.8
 rm -f %{buildroot}%{_mandir}/%{LNG}/man8/groupadd.8
 rm -f %{buildroot}%{_mandir}/%{LNG}/man8/groupdel.8
 rm -f %{buildroot}%{_mandir}/%{LNG}/man8/groupmod.8
@@ -126,6 +128,7 @@ rm -f %{buildroot}%{_mandir}/%{LNG}/man8/lastlog.8
 rm -f %{buildroot}%{_mandir}/%{LNG}/man8/newusers.8
 rm -f %{buildroot}%{_mandir}/%{LNG}/man8/pwck.8
 rm -f %{buildroot}%{_mandir}/%{LNG}/man8/pwconv.8
+rm -f %{buildroot}%{_mandir}/%{LNG}/man8/pwunconv.8
 rm -f %{buildroot}%{_mandir}/%{LNG}/man8/userdel.8
 rm -f %{buildroot}%{_mandir}/%{LNG}/man8/usermod.8
 rm -f %{buildroot}%{_mandir}/%{LNG}/man8/vipw.8
