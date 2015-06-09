@@ -3,7 +3,7 @@
 Summary:	French man (manual) pages from the Linux Documentation Project
 Name:		man-pages-fr
 Version:	3.03.0
-Release:	20
+Release:	21
 License:	GPLv2
 Group:		System/Internationalization
 Url:		http://manpagesfr.free.fr/
@@ -20,6 +20,7 @@ BuildArch:	noarch
 BuildRequires:	man
 Requires:	locales-fr
 Requires:	man
+Conflicts:	shadow < 4.2.1-12
 Autoreqprov:	false
 
 %description
