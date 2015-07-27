@@ -3,7 +3,7 @@
 Summary:	French man (manual) pages from the Linux Documentation Project
 Name:		man-pages-fr
 Version:	3.03.0
-Release:	22
+Release:	23
 License:	GPLv2
 Group:		System/Internationalization
 Url:		http://manpagesfr.free.fr/
@@ -166,7 +166,6 @@ fi
 
 %files
 %doc LISEZ_MOI changements
-%dir %{_mandir}/%{LNG}
 %dir /var/cache/man/%{LNG}
 %ghost %config(noreplace) /var/cache/man/%{LNG}/whatis
 %{_mandir}/%{LNG}/man*
@@ -175,4 +174,3 @@ fi
 %{_mandir}/%{LNG}/index.db*
 %attr(755,root,man) /var/catman/%{LNG}
 %config(noreplace) %attr(755,root,root) %{_sysconfdir}/cron.weekly/makewhatis-%{LNG}.cron
-
