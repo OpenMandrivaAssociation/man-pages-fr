@@ -6,7 +6,7 @@ Version:	3.03.0
 Release:	26
 License:	GPLv2
 Group:		System/Internationalization
-Url:		http://manpagesfr.free.fr/
+Url:		https://manpagesfr.free.fr/
 Source0:	http://manpagesfr.free.fr/download/%name-%version.tar.bz2 
 Source2:	man-pages-fr-goodies.tar.bz2
 Source3:	http://www.delafond.org/traducmanfr/mansupfr.tar.bz2
